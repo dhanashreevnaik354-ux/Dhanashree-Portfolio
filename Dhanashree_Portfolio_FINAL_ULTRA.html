@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhanashree Naik | Final Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+html{scroll-behavior:smooth}
+
+body{
+background:#081b29;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* neon background */
+body::before{
+content:'';
+position:fixed;
+inset:0;
+z-index:-1;
+background:
+radial-gradient(circle at 20% 20%,rgba(0,200,255,.18),transparent 35%),
+radial-gradient(circle at 80% 80%,rgba(100,255,218,.14),transparent 35%);
+animation:float 10s ease-in-out infinite alternate;
+}
+@keyframes float{
+from{transform:translateY(-10px)}
+to{transform:translateY(10px)}
+}
+
+/* NAV */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:16px 8%;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+.navbar a{
+color:#fff;
+text-decoration:none;
+margin-left:15px;
+}
+.navbar a:hover{color:#00c8ff}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+opacity:0;
+transform:translateY(30px);
+animation:fadeIn 1.2s forwards;
+}
+@keyframes fadeIn{
+to{opacity:1;transform:translateY(0)}
+}
+
+.hero h1{
+font-size:4rem;
+background:linear-gradient(90deg,#00c8ff,#64ffda);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.typing{
+color:#00c8ff;
+font-size:1.3rem;
+height:40px;
+text-shadow:0 0 10px #00c8ff;
+}
+
+.btn{
+display:inline-block;
+margin:10px;
+padding:12px 22px;
+background:#00c8ff;
+color:#000;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+.btn:hover{transform:translateY(-5px);box-shadow:0 0 20px #00c8ff}
+
+/* sections */
+.section{
+padding:80px 10%;
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+.section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.title{
+text-align:center;
+color:#00c8ff;
+margin-bottom:6px;
+text-shadow:0 0 10px #00c8ff;
+}
+
+.tagline{
+text-align:center;
+color:#00c8ff;
+margin-bottom:20px;
+font-size:14px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+padding:22px;
+border-radius:15px;
+margin-bottom:14px;
+backdrop-filter:blur(10px);
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 20px #00c8ff;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
+}
+
+/* timeline */
+.timeline{
+border-left:3px solid #00c8ff;
+padding-left:22px;
+max-width:800px;
+margin:auto;
+}
+.timeline-item{
+margin-bottom:25px;
+position:relative;
+}
+.timeline-item::before{
+content:'';
+position:absolute;
+left:-33px;
+top:5px;
+width:14px;
+height:14px;
+background:#00c8ff;
+border-radius:50%;
+box-shadow:0 0 10px #00c8ff;
+}
+
+footer{
+text-align:center;
+padding:25px;
+color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<h2>DN</h2>
+<nav>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#certs">Learning</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+
+<section class="hero section show">
+<div>
+<h1>Dhanashree Naik</h1>
+<div class="typing"></div>
+<p>MCA Student • Web Developer • Continuous Learner</p>
+
+<a href="resume.pdf" download class="btn">📄 Resume</a>
+<a href="https://www.linkedin.com/in/dhanashreenaik34" class="btn">💼 LinkedIn</a>
+</div>
+</section>
+
+<section id="about" class="section">
+<h2 class="title">About Me</h2>
+<p class="tagline">"Creating impact through clean and meaningful code"</p>
+
+<div class="card">
+I am an MCA student passionate about web development, software engineering, and building real-world applications. I enjoy learning new technologies and improving my problem-solving skills through practical projects.
+</div>
+</section>
+
+<section id="education" class="section">
+<h2 class="title">Education</h2>
+<p class="tagline">"Academic journey with strong foundation"</p>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>Master of Computer Applications (MCA)</h3>
+<p>Dayananda Sagar Academy of Technology and Management</p>
+<p>2025 – Present</p>
+</div>
+
+<div class="timeline-item">
+<h3>Bachelor of Computer Applications (BCA)</h3>
+<p>S.D.M Degree College, Honavar</p>
+<p>CGPA: 8.65 | 2022 – 2025</p>
+</div>
+
+<div class="timeline-item">
+<h3>Pre-University Course (PUC - Science)</h3>
+<p>Mohan K Shetty Pre-University College</p>
+<p>66% | 2021 – 2022</p>
+</div>
+
+<div class="timeline-item">
+<h3>Secondary School (SSLC)</h3>
+<p>91.04% | 2018 – 2020</p>
+</div>
+
+</div>
+</section>
+
+<section id="skills" class="section">
+<h2 class="title">Skills</h2>
+<p class="tagline">"Still learning, improving every day"</p>
+
+<div class="grid">
+<div class="card"><i class="fa-brands fa-html5"></i><h3>HTML</h3></div>
+<div class="card"><i class="fa-brands fa-css3-alt"></i><h3>CSS</h3></div>
+<div class="card"><i class="fa-brands fa-js"></i><h3>JavaScript</h3></div>
+<div class="card"><i class="fa-brands fa-java"></i><h3>Java</h3></div>
+<div class="card"><i class="fa-brands fa-python"></i><h3>Python</h3></div>
+<div class="card"><i class="fa-solid fa-database"></i><h3>SQL</h3></div>
+<div class="card"><i class="fa-solid fa-terminal"></i><h3>Linux</h3></div>
+</div>
+</section>
+
+<section id="projects" class="section">
+<h2 class="title">Projects</h2>
+<p class="tagline">"Turning ideas into working systems"</p>
+
+<div class="card">
+<h3>🌸 Dear Self</h3>
+<p>Full-featured self-care platform with journaling, mood tracking, and personal reflection system designed to improve mental wellness.</p>
+<p><b>Tech:</b> Java, SQL, HTML, CSS</p>
+</div>
+
+<div class="card">
+<h3>🏢 PG Hub</h3>
+<p>Complete PG management system handling room allocation, resident data, payment tracking and admin control dashboard.</p>
+<p><b>Tech:</b> Java, MySQL, HTML, CSS</p>
+</div>
+
+<div class="card">
+<h3>🏠 Smart Space</h3>
+<p>C-based automation simulation system demonstrating smart environment control logic and embedded thinking approach.</p>
+<p><b>Tech:</b> C Programming</p>
+</div>
+
+</section>
+
+<section id="certs" class="section">
+<h2 class="title">Certificates & Learning</h2>
+<p class="tagline">"Continuous growth mindset"</p>
+
+<div class="card">
+<h3>Programming Using Java</h3>
+<p>Infosys Springboard</p>
+</div>
+
+<div class="card">
+<h3>SAP Course (Ongoing)</h3>
+<p>Enterprise systems and business process fundamentals</p>
+</div>
+</section>
+
+<section id="contact" class="section">
+<h2 class="title">Let’s Connect</h2>
+<p class="tagline">"Open to opportunities, collaborations, and ideas"</p>
+
+<div class="card">
+<p>📧 Email: dhanashreevnaik354@gmail.com</p>
+<p>📱 Mobile: 8904333107</p>
+<p>💼 LinkedIn: linkedin.com/in/dhanashreenaik34</p>
+<p>📍 Location: Karnataka, India</p>
+</div>
+</section>
+
+<footer>© 2026 Dhanashree Naik</footer>
+
+<script>
+const sections=document.querySelectorAll('.section');
+window.addEventListener('scroll',()=>{
+sections.forEach(sec=>{
+const top=sec.getBoundingClientRect().top;
+if(top<window.innerHeight-120){
+sec.classList.add('show');
+}
+});
+});
+
+// typing
+const words=["Web Developer","MCA Student","Continuous Learner"];
+let w=0,c=0,d=false;
+const t=document.querySelector(".typing");
+
+setInterval(()=>{
+let word=words[w];
+t.textContent=d?word.substring(0,c--):word.substring(0,c++);
+if(c===word.length+1)d=true;
+if(c===0){d=false;w=(w+1)%words.length;}
+},120);
+</script>
+
+</body>
+</html>
